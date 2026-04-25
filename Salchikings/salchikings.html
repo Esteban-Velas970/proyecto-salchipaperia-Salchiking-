@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salchiking inicio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="salchikings.js"></script>
+    <script>
+if (localStorage.getItem("logueado") !== "true") {
+    window.location.href = "login/loginsalchikings.html";
+}
+</script>
 </head>
 
 <body>
@@ -18,7 +24,6 @@
                 <li><a href="#" class="hover:underline">Inicio</a></li>
             </ul>
             <p class="mt-2 text-sm text-white-300 p-5">¡Bienvenido a Salchiking, el paraíso de las salchipapas</p>
-            <a href="login/loginsalchikings.html" class="bg-white text-amber-800 px-4 py-2 rounded hover:bg-gray-200">Iniciar sesión</a>
         </nav>
     </header>
 
@@ -37,12 +42,14 @@
 
              <div class="flex flex-wrap gap-6">
 
-        <!-- TARJETA 1 -->
+       
         <div class="bg-white rounded-lg shadow-md w-64 p-4">
         <h3 class="text-xl font-bold mb-2">Salchipapa con huevo</h3>
             <img src="imagenes salchipapas/salchipapa con huevo.png" id="salchipapaconhuevo" class="w-full h-40 object-cover rounded mb-4">
             <p class="mb-2">Deliciosa salchipapa con huevo, una combinación irresistible de papas fritas, salchichas jugosas y un huevo frito encima, todo cubierto con queso derretido</p>
-            <button class="bg-amber-800 text-white px-4 py-2 rounded hover:bg-amber-700">Agregar al carrito</button>
+            <p class="font-bold text-gray-500">$18.000</p>
+            <p class="text-lg font-bold">Cantidad: <span id="contador-salchipapaconhuevo">0</span></p>
+            <button class="bg-amber-800 text-white px-4 py-2 rounded hover:bg-amber-700" onclick="agregarAlCarrito('salchipapaconhuevo', 18000)">Agregar al carrito</button>
         </div>
 
         
@@ -50,15 +57,23 @@
         <h3 class="text-xl font-bold mb-2">Salchipapa monstruo</h3>
             <img src="imagenes salchipapas/salchipapa monstruo.png" id="salchipapamonstruo" class="w-full h-40 object-cover rounded mb-4">
             <p class="mb-2">Deliciosa salchipapa monstruo, una combinación irresistible de papas fritas, salchichas jugosas y queso derretido</p>
-            <button class="bg-amber-800 text-white px-4 py-2 rounded hover:bg-amber-700">Agregar al carrito</button>
+            <p class="font-bold text-gray-500">$45.000</p>
+            <p class="text-lg font-bold">Cantidad: <span id="contador-salchipapamonstruo">0</span></p>
+            <button class="bg-amber-800 text-white px-4 py-2 rounded hover:bg-amber-700" onclick="agregarAlCarrito('salchipapamonstruo', 15000)">Agregar al carrito</button>
         </div>
 
-        <!-- TARJETA 3 -->
+       
         <div class="bg-white rounded-lg shadow-md w-64 p-4">
         <h3 class="text-xl font-bold mb-2">Salchipapa mega monstruo familiar</h3>
             <img src="imagenes salchipapas/salchipapa mega montruo familiar.png" id="salchipapamegamonstruofamiliar" class="w-full h-40 object-cover rounded mb-4">
             <p class="mb-2">Deliciosa salchipapa mega monstruo familiar, una combinación irresistible de papas fritas, salchichas jugosas y queso derretido</p>
-            <button class="bg-amber-800 text-white px-4 py-2 rounded hover:bg-amber-700">Agregar al carrito</button>
+            <p class="font-bold text-gray-500">$90.000</p>
+            <p class="text-lg font-bold">Cantidad: <span id="contador-salchipapamegamonstruofamiliar">0</span></p>
+            <button class="bg-amber-800 text-white px-4 py-2 rounded hover:bg-amber-700" onclick="agregarAlCarrito('salchipapamegamonstruofamiliar', 90000)">Agregar al carrito</button>
+            <script>
+          
+
+</script>
         </div>
 
 
@@ -66,22 +81,26 @@
                 <img src="imagenes salchipapas/salchipapasencilla.jpg" id="salchipapasencilla"class="w-full h-40 object-cover rounded mb-4">
                 <h3 class="text-xl font-bold mb-2">Salchipapa sencilla</h3>
                 <p class="mb-2">Papas fritas crujientes con salchichas jugosas, acompañadas de salsa de tu elección la que tu quieras o desees</p>
-                <p class="font-bold text-gray-500">$6000</p>
-                <button class="bg-amber-800 text-white px-4 py-2 rounded hover:bg-amber-700">Agregar al carrito</button>     
+                <p class="font-bold text-gray-500">$6.000</p>
+                <p class="text-lg font-bold">Cantidad: <span id="contador-salchipapasencilla">0</span></p>
+                <button class="bg-amber-800 text-white px-4 py-2 rounded hover:bg-amber-700" onclick="agregarAlCarrito('salchipapasencilla', 6000)">Agregar al carrito</button>     
 
             </div>
             <div class="bg-white rounded-lg shadow-md w-64 p-4 mb-4">
-            <img src="imagenes salchipapas/salchipapas gratinadas.jpg" id="salchipapaconhuevo" class="w-full h-40 object-cover rounded mb-4">
+            <img src="imagenes salchipapas/salchipapas gratinadas.jpg" id="salchipapasgratinadas" class="w-full h-40 object-cover rounded mb-4">
                 <h3 class="text-xl font-bold mb-2">Salchipapa gratinadas</h3>
                 <p class="mb-2">deliciosa salchipapa gratinada con queso derretido</p>
-                <button class="bg-amber-800 text-white px-4 py-2 rounded hover:bg-amber-700">Agregar al carrito</button>     
+                <p class="font-bold text-gray-500">$12.000</p>
+                <p class="text-lg font-bold">Cantidad: <span id="contador-salchipapasgratinadas">0</span></p>
+                <button class="bg-amber-800 text-white px-4 py-2 rounded hover:bg-amber-700" onclick="agregarAlCarrito('salchipapasgratinadas', 12000)">Agregar al carrito</button>     
             </div>
             <div class="bg-white rounded-lg shadow-md w-64 p-4 mb-4">
                 <img src="imagenes salchipapas/salchipapa costilla ahumada.jpg" id="salchipapacostillaahumada" class="w-full h-40 object-cover rounded mb-4">
                 <h3 class="text-xl font-bold mb-2">Salchipapa con costilla ahumada</h3>
-
                 <p class="mb-2">salchipapa con costilla ahumada, una combinación irresistible de papas fritas, salchichas jugosas y costillas ahumadas, todo cubierto con queso derretido</p>
-                <button class="bg-amber-800 text-white px-4 py-2 rounded hover:bg-amber-700">Agregar al carrito</button>
+                <p class="font-bold text-gray-500">$17.000</p>
+                <p class="text-lg font-bold">Cantidad: <span id="contador-salchipapacostillaahumada">0</span></p>
+                <button class="bg-amber-800 text-white px-4 py-2 rounded hover:bg-amber-700" onclick="agregarAlCarrito('salchipapacostillaahumada', 15000)">Agregar al carrito</button>
             </div>
         </div>
 
